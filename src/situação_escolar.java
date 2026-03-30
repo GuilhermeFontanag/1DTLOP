@@ -3,7 +3,7 @@ public class situação_escolar {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 double n1,n2,n3,n4;
-        String conceito;
+        char conceito;
         String situacao;
         System.out.println("Digite a nota do 1º bimestre: ");
          n1 = teclado.nextDouble();
@@ -16,16 +16,14 @@ double n1,n2,n3,n4;
 
         double media = (n1 + n2 + n3 + n4) / 4;
 
-        if (media >= 9) conceito = "A";
+        if (media >= 9 && 10>= media) conceito = "A";
         else if (media >= 7.5) conceito = "B";
         else if (media >= 6) conceito = "C";
         else if (media >= 4) conceito = "D";
         else conceito = "E";
 
-        // Situação do aluno
        situacao = (conceito.equals("A") || conceito.equals("B") || conceito.equals("C")) ? "APROVADO" : "REPROVADO";
-
-        // Exibição dos resultados
+        
         System.out.println("Notas: " + n1 + ", " + n2 + ", " + n3 + ", " + n4);
         System.out.println("Média: " + media);
         System.out.println("Conceito: " + conceito);
